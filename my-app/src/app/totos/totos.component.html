@@ -1,0 +1,8 @@
+<p *ngFor="let todo of todos">
+	<span>{{todo.name}}: </span>
+	<span *ngIf="todo.completed; else notCompleted">Iam Competed</span>
+</p>
+<!--<ng-container [ngTemplateOutlet]="notCompleted"></ng-container>-->
+<ng-template #notCompleted>
+	<span>Iam not completed</span>
+</ng-template>
